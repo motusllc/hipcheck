@@ -45,8 +45,8 @@ program
     "Disk location where to cache. Flag.")
   .option('-f, --delete-cache',
     "Delete cache (reset cached hosts). Flag.")
-  .option('-k, --kill-delisted',
-    "Remove delisted hosts to avoid excessive error responses from bad hosts. Flag.")
+  .option('-k, --kill-delisted <n>',
+    'Remove delisted hosts to avoid excessive error responses from bad hosts; integer parameter indicates the number of retries before killing the host. ', parseInt)
   .option('-e, --rollbar <s>',
     "Rollbar token for error tracking. Default: undefined");
 
